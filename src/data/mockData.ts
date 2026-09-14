@@ -1,4 +1,4 @@
-import { ServiceLine, PackageOffer, CaseStudy, DealRoomDoc } from '../types';
+import { ServiceLine, PackageOffer, CaseStudy, DealRoomDoc, LeadershipMember } from '../types';
 
 export const SERVICE_LINES: ServiceLine[] = [
   {
@@ -14,6 +14,7 @@ export const SERVICE_LINES: ServiceLine[] = [
       'Risk Mitigation & Compliance Governance Model'
     ],
     iconName: 'Compass',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
     collapsibleDetails: {
       strategicObjective: 'Establish seamless, compliant, and defensible market position for global capital and corporations.',
       targetClients: 'Multinational Corporations, Foreign Direct Investors, Expanding Tech Enterprises.',
@@ -38,6 +39,7 @@ export const SERVICE_LINES: ServiceLine[] = [
       'Bilateral Sovereign Alignment Framework'
     ],
     iconName: 'Globe2',
+    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
     collapsibleDetails: {
       strategicObjective: 'Unlock international liquidity, sovereign wealth backing, and strategic trade channels for regional leaders.',
       targetClients: 'State-Owned Enterprises, High-Growth Tech Ventures, Sovereign Development Funds.',
@@ -62,6 +64,7 @@ export const SERVICE_LINES: ServiceLine[] = [
       'Interactive Virtual Deal Room Construction'
     ],
     iconName: 'FileText',
+    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
     collapsibleDetails: {
       strategicObjective: 'Maximize valuation clarity and accelerate diligence cycles for major capital raises and partnerships.',
       targetClients: 'Sponsors seeking $5M–$100M+ capital allocations, Project Developers, Fund Managers.',
@@ -86,6 +89,7 @@ export const SERVICE_LINES: ServiceLine[] = [
       'Public Affairs & Policy Narrative Alignment'
     ],
     iconName: 'Award',
+    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
     collapsibleDetails: {
       strategicObjective: 'Command premium brand equity, public credibility, and institutional trust across target markets.',
       targetClients: 'Governments, Major Energy Consortia, Financial Institutions, NGOs.',
@@ -110,6 +114,7 @@ export const SERVICE_LINES: ServiceLine[] = [
       'Post-Summit Lead Conversion & Action Tracking'
     ],
     iconName: 'Users',
+    imageUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
     collapsibleDetails: {
       strategicObjective: 'Drive tangible transaction volume and public-private commitments through orchestrated physical and hybrid summits.',
       targetClients: 'Government Ministries, Trade Associations, Private Equity Consortia.',
@@ -235,7 +240,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     solution: 'Haugh Advisory structured an Outbound Global Bridge mandate, preparing tier-1 deal collateral, organizing closed-door investor roundtables in Dubai, and negotiating regulatory frameworks with local sports ministries.',
     outcome: 'Successfully closed a $28.5M series-B extension led by a regional sovereign-backed sports fund and launched operations across 4 markets within 5 months.',
     featured: true,
-    publishedYear: '2025'
+    publishedYear: '2025',
+    imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'cs-energy-green-hydrogen',
@@ -253,7 +259,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     solution: 'Delivered an Inbound Market Entry Blueprint, interfacing directly with the Ministry of Energy, drafting public-private partnership terms, and mitigating currency repatriation risks.',
     outcome: 'Secured sovereign cabinet approval, unlocking $45M in debt financing from international development finance institutions (DFIs).',
     featured: true,
-    publishedYear: '2026'
+    publishedYear: '2026',
+    imageUrl: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'cs-gov-digital-trade',
@@ -271,7 +278,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     solution: 'Engineered a modern trade architecture and convened the inaugural Bilateral Trade Summit in Johannesburg, uniting government ministers, logistics leaders, and technology sponsors.',
     outcome: 'Accelerated digital customs integration by 40% and generated $310M in private-sector investment commitments.',
     featured: false,
-    publishedYear: '2025'
+    publishedYear: '2025',
+    imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'cs-ngo-climate-resilience',
@@ -289,7 +297,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     solution: 'Structured a Sponsor & Partner Ready deal framework, converting corporate ESG mandates into long-term commercial co-investments.',
     outcome: 'Successfully deployed blended finance across 3 countries, improving crop yields by 35% while establishing sustainable commercial return models.',
     featured: false,
-    publishedYear: '2024'
+    publishedYear: '2024',
+    imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80'
   }
 ];
 
@@ -342,10 +351,41 @@ export const COMPANY_PHILOSOPHY = {
   mission: 'We de-risk cross-border execution by combining deep regulatory insight, high-level political acumen, and tier-1 transaction structuring for market leaders.',
   corePhilosophy: 'Cross-border growth fails not due to lack of vision, but due to friction at the intersection of local regulation, institutional trust, and capital alignment. Haugh Advisory exists to eliminate this friction, transforming ambitious ideas into solid, defensible assets.',
   regionalNodes: [
-    { city: 'Johannesburg', country: 'South Africa', focus: 'Southern & Sub-Saharan Trade Node' },
-    { city: 'London', country: 'United Kingdom', focus: 'European Capital & Regulatory Hub' },
-    { city: 'Dubai', country: 'United Arab Emirates', focus: 'Middle East & Sovereign Wealth Gateway' },
-    { city: 'Washington D.C.', country: 'United States', focus: 'North American Policy & DFI Liaison' },
-    { city: 'Nairobi', country: 'Kenya', focus: 'East African Tech & Commercial Hub' }
+    { city: 'Johannesburg', country: 'South Africa', focus: 'Southern & Sub-Saharan Trade Node', imageUrl: 'https://images.unsplash.com/photo-1577948000111-9c970dfe3743?auto=format&fit=crop&w=600&q=80' },
+    { city: 'London', country: 'United Kingdom', focus: 'European Capital & Regulatory Hub', imageUrl: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80' },
+    { city: 'Dubai', country: 'United Arab Emirates', focus: 'Middle East & Sovereign Wealth Gateway', imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80' },
+    { city: 'Washington D.C.', country: 'United States', focus: 'North American Policy & DFI Liaison', imageUrl: 'https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=600&q=80' },
+    { city: 'Nairobi', country: 'Kenya', focus: 'East African Tech & Commercial Hub', imageUrl: 'https://images.unsplash.com/photo-1611348586804-61bf6c080437?auto=format&fit=crop&w=600&q=80' }
   ]
 };
+
+export const LEADERSHIP_TEAM: LeadershipMember[] = [
+  {
+    id: 'leader-1',
+    name: 'Alistair Haugh',
+    role: 'Managing Partner & Sovereign Advisory Lead',
+    bio: 'Former Senior Trade Advisor to sovereign wealth funds with 18+ years directing cross-border transaction structuring across EMEA and North America.',
+    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'leader-2',
+    name: 'Dr. Amina Diallo',
+    role: 'Senior Partner, Policy Navigation & DFI Relations',
+    bio: 'Specialist in sub-Saharan energy transition policy and multilateral finance, having advised 12+ ministries on infrastructure regulatory frameworks.',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'leader-3',
+    name: 'Marcus Vance',
+    role: 'Partner, Capital Markets & Deal Architecture',
+    bio: 'Ex-tier-1 investment banker overseeing $4.2B in cumulative cross-border M&A, debt syndication, and joint-venture market entries.',
+    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'leader-4',
+    name: 'Elena Rostova',
+    role: 'Managing Director, Global Brand & Sovereign Reputation',
+    bio: 'Institutional narrative strategist who has led sovereign perception management and executive thought leadership campaigns worldwide.',
+    imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80'
+  }
+];

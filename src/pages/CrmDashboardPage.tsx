@@ -55,10 +55,10 @@ export const CrmDashboardPage: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#0B1B2B] text-white">
+    <div className="min-h-screen bg-[#0B1B2B] text-white pb-safe">
       
       {/* Header */}
-      <section className="pt-12 pb-8 bg-geo-pattern border-b border-[#142A3E]">
+      <section className="pt-10 sm:pt-14 pb-8 bg-geo-pattern border-b border-[#142A3E] pt-safe">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center space-x-2 text-xs font-semibold text-[#C5A059] uppercase tracking-widest bg-[#142A3E] px-3 py-1 rounded-full border border-[#C5A059]/30 mb-2">

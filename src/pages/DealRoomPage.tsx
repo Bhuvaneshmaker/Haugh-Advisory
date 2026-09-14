@@ -127,10 +127,10 @@ export const DealRoomPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B1B2B] text-white">
+    <div className="min-h-screen bg-[#0B1B2B] text-white pb-safe">
       
       {/* Header */}
-      <section className="pt-16 pb-12 bg-geo-pattern border-b border-[#142A3E]">
+      <section className="pt-10 sm:pt-16 pb-10 sm:pb-12 bg-geo-pattern border-b border-[#142A3E] pt-safe">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 bg-[#142A3E] border border-[#C5A059]/50 px-4 py-1.5 rounded-full text-xs font-semibold text-[#C5A059] uppercase tracking-widest mb-3">
             <Lock className="w-4 h-4" />
@@ -379,12 +379,12 @@ export const DealRoomPage: React.FC = () => {
               </div>
             </div>
 
-            {/* REAL-TIME AUDIT ACCESS LOGS TABLE (PRD Section 4 & 5) */}
+            {/* REAL-TIME AUDIT ACCESS LOGS TABLE */}
             <div className="bg-[#142A3E] border border-gray-800 rounded-xl p-6 space-y-4">
               <div className="flex items-center justify-between border-b border-gray-700/60 pb-3">
                 <h3 className="font-serif text-lg font-bold text-white flex items-center space-x-2">
                   <Clock className="w-4 h-4 text-[#C5A059]" />
-                  <span>Real-Time Audit Trail (`AccessLog`)</span>
+                  <span>Real-Time Security Audit Trail</span>
                 </h3>
                 <span className="text-xs text-gray-400 font-mono">
                   Total Logged Accesses: {accessLogs.length}
@@ -453,7 +453,7 @@ export const DealRoomPage: React.FC = () => {
             {/* WATERMARKED PREVIEW CONTAINER */}
             <div className="relative p-8 min-h-[500px] bg-[#F8F9FA] text-[#1A1A1A] confidential-watermark flex flex-col justify-between overflow-hidden select-none">
               
-              {/* Dynamic SVG Watermark Overlay (PRD Section 4 Spec) */}
+              {/* Dynamic SVG Watermark Overlay */}
               <div className="absolute inset-0 pointer-events-none z-10 flex items-center justify-center opacity-15 rotate-[-25deg]">
                 <div className="text-center font-mono space-y-2">
                   <span className="text-4xl font-black text-red-900 tracking-widest block uppercase">

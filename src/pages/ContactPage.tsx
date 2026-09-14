@@ -50,10 +50,10 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B1B2B] text-white">
+    <div className="min-h-screen bg-[#0B1B2B] text-white pb-safe">
       
       {/* Header */}
-      <section className="pt-16 pb-12 bg-geo-pattern border-b border-[#142A3E]">
+      <section className="pt-10 sm:pt-16 pb-10 sm:pb-12 bg-geo-pattern border-b border-[#142A3E] pt-safe">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-[#C5A059]">
             Direct Advisory Liaison

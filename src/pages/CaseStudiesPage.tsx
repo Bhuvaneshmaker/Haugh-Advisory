@@ -18,10 +18,10 @@ export const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ openLeadModal 
     : CASE_STUDIES.filter((cs) => cs.sector === selectedSector);
 
   return (
-    <div className="min-h-screen bg-[#0B1B2B] text-white">
+    <div className="min-h-screen bg-[#0B1B2B] text-white pb-safe">
       
       {/* Header */}
-      <section className="pt-16 pb-12 bg-geo-pattern border-b border-[#142A3E]">
+      <section className="pt-10 sm:pt-16 pb-10 sm:pb-12 bg-geo-pattern border-b border-[#142A3E] pt-safe">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-[#C5A059]">
             Credibility & Impact Hub
@@ -36,7 +36,7 @@ export const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ openLeadModal 
         </div>
       </section>
 
-      {/* FILTERABLE SECTOR GRID (PRD Page 5 Spec) */}
+      {/* FILTERABLE SECTOR GRID */}
       <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Filter Pills */}
@@ -66,48 +66,66 @@ export const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ openLeadModal 
           {filteredCaseStudies.map((cs) => (
             <div
               key={cs.id}
-              className="bg-[#142A3E]/80 border border-[#C5A059]/30 hover:border-[#C5A059] rounded-xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl group"
+              className="bg-[#142A3E]/80 border border-[#C5A059]/30 hover:border-[#C5A059] rounded-xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-2xl group"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-semibold uppercase tracking-widest px-3 py-1 rounded bg-[#0B1B2B] text-[#C5A059] border border-[#C5A059]/30">
-                    {cs.sector}
-                  </span>
-                  <div className="flex items-center space-x-1 text-xs text-gray-400">
-                    <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
-                    <span>{cs.region}</span>
+              <div>
+                {/* Case Study Image Banner */}
+                {cs.imageUrl && (
+                  <div className="h-48 w-full overflow-hidden relative">
+                    <img
+                      src={cs.imageUrl}
+                      alt={cs.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1B2B] via-transparent to-transparent opacity-90" />
+                    <span className="absolute bottom-3 left-4 text-[10px] font-mono font-semibold uppercase tracking-widest px-3 py-1 rounded bg-[#0B1B2B] text-[#C5A059] border border-[#C5A059]/30 shadow">
+                      {cs.sector}
+                    </span>
                   </div>
-                </div>
+                )}
 
-                <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#C5A059] transition-colors leading-snug">
-                  {cs.title}
-                </h3>
-
-                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                  {cs.impactSummary}
-                </p>
-
-                {/* Metrics Bar */}
-                <div className="grid grid-cols-3 gap-2 bg-[#0B1B2B] p-3 rounded-lg border border-gray-800 my-4 text-center">
-                  {cs.metrics.map((m, mIdx) => (
-                    <div key={mIdx}>
-                      <span className="block font-serif text-base font-bold text-[#C5A059]">{m.value}</span>
-                      <span className="block text-[10px] text-gray-400 uppercase tracking-wider">{m.label}</span>
+                <div className="p-8 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-mono font-semibold text-[#C5A059] uppercase tracking-wider">
+                      {cs.clientName}
+                    </span>
+                    <div className="flex items-center space-x-1 text-xs text-gray-400">
+                      <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
+                      <span>{cs.region}</span>
                     </div>
-                  ))}
+                  </div>
+
+                  <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#C5A059] transition-colors leading-snug">
+                    {cs.title}
+                  </h3>
+
+                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                    {cs.impactSummary}
+                  </p>
+
+                  {/* Metrics Bar */}
+                  <div className="grid grid-cols-3 gap-2 bg-[#0B1B2B] p-3 rounded-lg border border-gray-800 my-4 text-center">
+                    {cs.metrics.map((m, mIdx) => (
+                      <div key={mIdx}>
+                        <span className="block font-serif text-base font-bold text-[#C5A059]">{m.value}</span>
+                        <span className="block text-[10px] text-gray-400 uppercase tracking-wider">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-gray-700/60 flex items-center justify-between">
+              <div className="p-8 pt-0 border-t border-gray-700/60 flex items-center justify-between">
                 <span className="text-xs text-gray-400">
-                  Client: <strong className="text-white">{cs.clientName}</strong>
+                  Published: <strong className="text-white">{cs.publishedYear}</strong>
                 </span>
 
                 <button
                   onClick={() => setActiveCaseModal(cs)}
                   className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider text-[#C5A059] hover:underline"
                 >
-                  <span>Read Case Study</span>
+                  <span>Read Full Case Study</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>

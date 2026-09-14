@@ -124,7 +124,18 @@ app.get('/api/health', (req: Request, res: Response) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// 1. POST /api/lead-capture (PRD Section 6)
+// Config Endpoint (exposes sanitized APP_URL and system readiness safely)
+app.get('/api/config', (req: Request, res: Response) => {
+  const rawUrl = process.env.APP_URL || `${req.protocol}://${req.get('host')}`;
+  const appUrl = rawUrl.replace(/\/+$/, '');
+  res.json({
+    appUrl,
+    environment: process.env.NODE_ENV || 'development',
+    hasGeminiKey: Boolean(process.env.GEMINI_API_KEY)
+  });
+});
+
+// 1. POST /api/lead-capture (Lead Intake Endpoint)
 app.post('/api/lead-capture', (req: Request, res: Response) => {
   const clientIp = (req.headers['x-forwarded-for'] as string || req.socket.remoteAddress || '127.0.0.1').split(',')[0];
 
@@ -148,7 +159,7 @@ app.post('/api/lead-capture', (req: Request, res: Response) => {
     return res.status(400).json({ error: 'Invalid email address format.' });
   }
 
-  // Determine Notification Route (PRD Section 6)
+  // Determine Notification Route
   const routedTo = direction === 'INBOUND'
     ? 'inbound@haughadvisory.com'
     : direction === 'OUTBOUND'
@@ -205,7 +216,7 @@ app.patch('/api/leads/:id', (req: Request, res: Response) => {
   res.json({ success: true, lead });
 });
 
-// 4. POST /api/dealroom/request-access (PRD Section 4)
+// 4. POST /api/dealroom/request-access (Stakeholder OTP Request)
 app.post('/api/dealroom/request-access', (req: Request, res: Response) => {
   const { email, organization } = req.body;
 
@@ -250,7 +261,7 @@ app.post('/api/dealroom/request-access', (req: Request, res: Response) => {
   });
 });
 
-// 5. POST /api/dealroom/verify-access (PRD Section 4)
+// 5. POST /api/dealroom/verify-access (Stakeholder Identity Verification)
 app.post('/api/dealroom/verify-access', (req: Request, res: Response) => {
   const { email, otpCode } = req.body;
 

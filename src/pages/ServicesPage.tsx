@@ -45,10 +45,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ openLeadModal }) => 
   };
 
   return (
-    <div className="min-h-screen bg-[#0B1B2B] text-white">
+    <div className="min-h-screen bg-[#0B1B2B] text-white pb-safe">
       
       {/* Header */}
-      <section className="pt-16 pb-12 bg-geo-pattern border-b border-[#142A3E]">
+      <section className="pt-10 sm:pt-16 pb-10 sm:pb-12 bg-geo-pattern border-b border-[#142A3E] pt-safe">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-[#C5A059]">
             Comprehensive Advisory Suite
@@ -63,7 +63,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ openLeadModal }) => 
         </div>
       </section>
 
-      {/* SERVICE LINES WITH COLLAPSIBLE DETAIL VIEWS (PRD Page 3 Spec) */}
+      {/* SERVICE LINES WITH EXPANDABLE DETAIL VIEWS */}
       <section className="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         {SERVICE_LINES.map((service) => {
           const isExpanded = expandedId === service.id;
@@ -111,11 +111,28 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ openLeadModal }) => 
               {isExpanded && (
                 <div className="px-6 pb-8 pt-2 border-t border-gray-700/60 space-y-6 animate-fadeIn">
                   
+                  {/* Service Line Visual Banner */}
+                  {service.imageUrl && (
+                    <div className="h-56 w-full rounded-xl overflow-hidden relative my-4 border border-gray-800">
+                      <img
+                        src={service.imageUrl}
+                        alt={service.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1B2B] via-transparent to-transparent opacity-80" />
+                      <div className="absolute bottom-4 left-4 right-4 text-xs text-gray-200 bg-[#0B1B2B]/80 backdrop-blur p-3 rounded-lg border border-[#C5A059]/30">
+                        <span className="font-semibold text-[#C5A059] uppercase block text-[10px] tracking-widest">Advisory Visual Context</span>
+                        {service.shortDesc}
+                      </div>
+                    </div>
+                  )}
+
                   <p className="text-gray-300 text-sm leading-relaxed font-sans">
                     {service.fullDesc}
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-[#0B1B2B] p-4 rounded-lg border border-gray-800">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 bg-[#0B1B2B] p-4 rounded-lg border border-gray-800">
                     <div className="space-y-1">
                       <div className="flex items-center space-x-1.5 text-xs text-[#C5A059] font-semibold uppercase">
                         <Target className="w-4 h-4" />

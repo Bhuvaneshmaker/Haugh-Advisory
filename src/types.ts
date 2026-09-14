@@ -44,6 +44,7 @@ export interface ServiceLine {
   fullDesc: string;
   deliverables: string[];
   iconName: string;
+  imageUrl?: string;
   collapsibleDetails: {
     strategicObjective: string;
     targetClients: string;
@@ -81,6 +82,16 @@ export interface CaseStudy {
   outcome: string;
   featured: boolean;
   publishedYear: string;
+  imageUrl?: string;
+}
+
+export interface LeadershipMember {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  imageUrl: string;
+  linkedinUrl?: string;
 }
 
 export interface DealRoomDoc {

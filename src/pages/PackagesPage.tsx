@@ -9,10 +9,10 @@ interface PackagesPageProps {
 
 export const PackagesPage: React.FC<PackagesPageProps> = ({ openLeadModal }) => {
   return (
-    <div className="min-h-screen bg-[#0B1B2B] text-white">
+    <div className="min-h-screen bg-[#0B1B2B] text-white pb-safe">
       
       {/* Header */}
-      <section className="pt-16 pb-12 bg-geo-pattern border-b border-[#142A3E]">
+      <section className="pt-10 sm:pt-16 pb-10 sm:pb-12 bg-geo-pattern border-b border-[#142A3E] pt-safe">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-[#C5A059]">
             Engagement Models & Comparison Matrix
@@ -27,7 +27,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ openLeadModal }) => 
         </div>
       </section>
 
-      {/* DESKTOP COMPARISON TABLE VIEW (PRD Page 4 Spec) */}
+      {/* DESKTOP COMPARISON TABLE VIEW */}
       <section className="hidden lg:block py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#142A3E]/70 border border-[#C5A059]/30 rounded-xl overflow-hidden shadow-2xl">
           <table className="w-full text-left border-collapse">
@@ -36,7 +36,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ openLeadModal }) => 
             <thead>
               <tr className="bg-[#0B1B2B] border-b border-gray-700">
                 <th className="p-6 text-xs font-bold uppercase tracking-wider text-gray-400 w-1/5">
-                  Package Specification
+                  Package Overview & Features
                 </th>
                 {PACKAGED_OFFERS.map((pkg) => (
                   <th key={pkg.id} className="p-6 w-1/5 border-l border-gray-800">
@@ -127,7 +127,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ openLeadModal }) => 
         </div>
       </section>
 
-      {/* MOBILE CARD STACKED VIEW (PRD Page 4 Spec) */}
+      {/* MOBILE CARD STACKED VIEW */}
       <section className="lg:hidden py-12 max-w-xl mx-auto px-4 space-y-8">
         {PACKAGED_OFFERS.map((pkg) => (
           <div
