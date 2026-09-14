@@ -1,0 +1,6 @@
+{
+  "name": "Haugh Advisory",
+  "description": "Haugh Advisory — Institutional Advisory Web Platform & Stakeholder Deal Room Portal",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

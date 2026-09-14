@@ -1,0 +1,44 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Haugh Advisory Official Circular Emblem Logo (36005.jpg Badge) -->
+  
+  <!-- Outer Gold Border Ring -->
+  <circle cx="200" cy="200" r="192" fill="#FFFFFF" stroke="#C5A059" stroke-width="5" />
+  <circle cx="200" cy="200" r="184" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6" />
+
+  <!-- Monogram Group (H + A) -->
+  <g id="monogram">
+    <!-- H Left Stem (Navy #0B1B2B) -->
+    <path d="M 140 68 H 168 V 180 H 140 Z" fill="#0B1B2B" />
+    <path d="M 130 68 H 178 V 74 H 130 Z" fill="#0B1B2B" />
+    <path d="M 130 174 H 178 V 180 H 130 Z" fill="#0B1B2B" />
+
+    <!-- H Right Stem (Navy #0B1B2B) -->
+    <path d="M 232 68 H 260 V 180 H 232 Z" fill="#0B1B2B" />
+    <path d="M 222 68 H 270 V 74 H 222 Z" fill="#0B1B2B" />
+    <path d="M 222 174 H 270 V 180 H 222 Z" fill="#0B1B2B" />
+
+    <!-- H Crossbar -->
+    <path d="M 168 118 H 232 V 132 H 168 Z" fill="#0B1B2B" />
+
+    <!-- Interlocking Gold A (#C5A059) -->
+    <path d="M 200 76 L 165 180 H 185 L 200 132 L 215 180 H 235 L 200 76 Z" fill="#C5A059" />
+    <!-- A Overlap Accent -->
+    <path d="M 212 174 H 240 V 180 H 212 Z" fill="#C5A059" />
+    <!-- A Crossbar -->
+    <path d="M 185 148 H 215 L 211 156 H 189 Z" fill="#C5A059" />
+  </g>
+
+  <!-- Brand Typography -->
+  <!-- HAUGH -->
+  <text x="200" y="244" font-family="'Playfair Display', 'Cinzel', serif" font-size="44" font-weight="800" fill="#0B1B2B" text-anchor="middle" letter-spacing="10">HAUGH</text>
+
+  <!-- Left Divider Line -->
+  <line x1="75" y1="278" x2="135" y2="278" stroke="#C5A059" stroke-width="2.5" />
+  <!-- ADVISORY -->
+  <text x="200" y="284" font-family="'Playfair Display', 'Cinzel', serif" font-size="18" font-weight="700" fill="#C5A059" text-anchor="middle" letter-spacing="8">ADVISORY</text>
+  <!-- Right Divider Line -->
+  <line x1="265" y1="278" x2="325" y2="278" stroke="#C5A059" stroke-width="2.5" />
+
+  <!-- INSIGHT. STRATEGY. GROWTH. -->
+  <text x="200" y="328" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#334155" text-anchor="middle" letter-spacing="5">INSIGHT. STRATEGY. GROWTH.</text>
+</svg>

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-haugh-navy: #0B1B2B;
+  --color-haugh-navy-light: #142A3E;
+  --color-haugh-gold: #C5A059;
+  --color-haugh-gold-hover: #B08C46;
+  --color-haugh-bg-light: #F8F9FA;
+  --color-haugh-text-dark: #1A1A1A;
+  --color-haugh-border-grey: #E2E8F0;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', Calibri, sans-serif;
+  --font-mono: Consolas, monospace;
+}
+
+/* Custom Geometric Pattern and Watermark Styling */
+.bg-geo-pattern {
+  background-color: #0B1B2B;
+  background-image: radial-gradient(rgba(197, 160, 89, 0.12) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(20, 42, 62, 0.4) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(20, 42, 62, 0.4) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+}
+
+.bg-geo-light {
+  background-color: #F8F9FA;
+  background-image: radial-gradient(rgba(11, 27, 43, 0.05) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+  background-size: 32px 32px, 64px 64px, 64px 64px;
+}
+
+/* Watermark overlay on confidential documents */
+.confidential-watermark {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(197, 160, 89, 0.04),
+    rgba(197, 160, 89, 0.04) 120px,
+    transparent 120px,
+    transparent 240px
+  );
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1B2B;
+}
+::-webkit-scrollbar-thumb {
+  background: #142A3E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
