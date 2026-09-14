@@ -3,12 +3,18 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { LeadModal } from './components/LeadModal';
 import { HomePage } from './pages/HomePage';
+import { WhatWeDoPage } from './pages/WhatWeDoPage';
+import { MarketEntryPage } from './pages/MarketEntryPage';
+import { PartnershipsPage } from './pages/PartnershipsPage';
+import { SponsorshipsFundingPage } from './pages/SponsorshipsFundingPage';
 import { AboutPage } from './pages/AboutPage';
+import { InsightsPage } from './pages/InsightsPage';
+import { ContactPage } from './pages/ContactPage';
+import { PrivacyTermsPage } from './pages/PrivacyTermsPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { PackagesPage } from './pages/PackagesPage';
 import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { DealRoomPage } from './pages/DealRoomPage';
-import { ContactPage } from './pages/ContactPage';
 import { CrmDashboardPage } from './pages/CrmDashboardPage';
 import { Direction } from './types';
 import { ShieldCheck, MessageSquare, ArrowUp } from 'lucide-react';
@@ -28,6 +34,10 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeTab]);
+
   const openLeadModal = (direction: Direction = 'GENERAL', packageType: string = '') => {
     setLeadDirection(direction);
     setLeadPackage(packageType);
@@ -42,16 +52,30 @@ export default function App() {
     switch (activeTab) {
       case 'home':
         return <HomePage setActiveTab={setActiveTab} openLeadModal={openLeadModal} />;
+      case 'what-we-do':
+        return <WhatWeDoPage openLeadModal={openLeadModal} />;
+      case 'market-entry':
+        return <MarketEntryPage openLeadModal={openLeadModal} />;
+      case 'partnerships':
+        return <PartnershipsPage openLeadModal={openLeadModal} />;
+      case 'sponsorships-funding':
+        return <SponsorshipsFundingPage openLeadModal={openLeadModal} />;
       case 'about':
         return <AboutPage openLeadModal={openLeadModal} />;
+      case 'insights':
+        return <InsightsPage />;
+      case 'contact':
+        return <ContactPage />;
+      case 'privacy':
+        return <PrivacyTermsPage mode="privacy" />;
+      case 'terms':
+        return <PrivacyTermsPage mode="terms" />;
       case 'services':
         return <ServicesPage openLeadModal={openLeadModal} />;
       case 'packages':
         return <PackagesPage openLeadModal={openLeadModal} />;
       case 'case-studies':
         return <CaseStudiesPage openLeadModal={openLeadModal} />;
-      case 'contact':
-        return <ContactPage />;
       case 'deal-room':
         return <DealRoomPage />;
       case 'crm':

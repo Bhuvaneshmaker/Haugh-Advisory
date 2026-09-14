@@ -13,10 +13,12 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, openLea
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Us' },
-    { id: 'services', label: 'Service Lines' },
-    { id: 'packages', label: 'Packaged Offers' },
-    { id: 'case-studies', label: 'Case Studies' },
+    { id: 'what-we-do', label: 'What We Do' },
+    { id: 'market-entry', label: 'Market Entry' },
+    { id: 'partnerships', label: 'Partnerships' },
+    { id: 'sponsorships-funding', label: 'Sponsorships & Funding' },
+    { id: 'about', label: 'About' },
+    { id: 'insights', label: 'Insights' },
     { id: 'contact', label: 'Contact' },
     { id: 'deal-room', label: 'Deal Room', isProtected: true },
     { id: 'crm', label: 'Lead CRM', isCrm: true }
@@ -110,7 +112,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, openLea
               className="bg-[#C5A059] hover:bg-[#B08C46] text-[#0B1B2B] px-3.5 xl:px-4 py-2 xl:py-2.5 rounded-md text-[11px] xl:text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:shadow-lg flex items-center space-x-1.5"
               id="header-inquire-btn"
             >
-              <span>Inquire Now</span>
+              <span>Start a Conversation</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>

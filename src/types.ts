@@ -13,9 +13,26 @@ export interface Lead {
   orgType: OrgType;
   direction: Direction;
   packageType?: string;
+  countryMarket?: string;
+  requirementType?: 'Market Entry' | 'Partnership' | 'Sponsorship' | 'Funding' | 'Business Development' | 'Other';
+  timeline?: string;
+  referralSource?: string;
   message: string;
   status: LeadStatus;
   budgetScope?: string;
+}
+
+export interface Insight {
+  id: string;
+  title: string;
+  slug: string;
+  category: 'Market Notes' | 'Partnership Briefings' | 'Sponsor Perspectives' | 'Funding Notes' | 'Field Notes';
+  readTime: string;
+  publishedDate: string;
+  author: string;
+  summary: string;
+  content: string[];
+  imageUrl?: string;
 }
 
 export interface DealRoomUser {

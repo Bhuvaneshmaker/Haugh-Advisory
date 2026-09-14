@@ -1,4 +1,4 @@
-import { ServiceLine, PackageOffer, CaseStudy, DealRoomDoc, LeadershipMember } from '../types';
+import { ServiceLine, PackageOffer, CaseStudy, DealRoomDoc, LeadershipMember, Insight } from '../types';
 
 export const SERVICE_LINES: ServiceLine[] = [
   {
@@ -389,3 +389,71 @@ export const LEADERSHIP_TEAM: LeadershipMember[] = [
     imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80'
   }
 ];
+
+export const INSIGHTS_DATA: Insight[] = [
+  {
+    id: 'insight-1',
+    title: 'Navigating Sovereign Regulatory Friction in West African Clean Energy Expansion',
+    slug: 'navigating-sovereign-regulatory-friction-west-africa',
+    category: 'Market Notes',
+    readTime: '6 min read',
+    publishedDate: 'September 2026',
+    author: 'Alistair Haugh & Dr. Amina Diallo',
+    summary: 'A structured evaluation of foreign direct investment protocols, currency repatriation mechanisms, and land concession alignment for institutional clean energy sponsors.',
+    content: [
+      'Cross-border clean energy projects across West Africa often encounter friction not at the technology layer, but within the multi-jurisdictional licensing pipeline. Foreign capital sponsors frequently underestimate the time horizon required for sovereign cabinet approvals.',
+      'To build a defensible entry model, international operators must establish a bilateral alignment framework early in the project lifecycle. This includes aligning local content mandates with multilateral development bank (MDB) debt covenants.',
+      'Our field notes indicate that projects utilizing structured public-private partnerships (PPPs) with sovereign guarantee backing achieve financial close 35% faster than purely private concessions.'
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'insight-2',
+    title: 'What Makes a Cross-Border Commercial Partnership Institutional-Grade?',
+    slug: 'what-makes-cross-border-partnership-institutional-grade',
+    category: 'Partnership Briefings',
+    readTime: '5 min read',
+    publishedDate: 'August 2026',
+    author: 'Marcus Vance',
+    summary: 'Why handshake joint-ventures fail in emerging market corridors, and how to structure governance models that satisfy both local partners and international lenders.',
+    content: [
+      'In cross-border business development between Europe, the Middle East, and Africa, informal commercial memoranda frequently stall during due diligence.',
+      'Institutional partners evaluate four core criteria before committing capital or market access: legal entity enforceability, clear dispute resolution jurisdiction, risk-adjusted profit repatriation terms, and operational alignment on local compliance standards.',
+      'By establishing clear governance matrices prior to formal contract signing, enterprises reduce transaction friction and ensure long-term alignment.'
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'insight-3',
+    title: 'Structuring Commercial Sponsorship Propositions for Global Sports & Cultural Assets',
+    slug: 'structuring-commercial-sponsorship-propositions',
+    category: 'Sponsor Perspectives',
+    readTime: '7 min read',
+    publishedDate: 'July 2026',
+    author: 'Elena Rostova',
+    summary: 'Moving away from generic logo placement toward high-yield corporate activation and sovereign brand alignment in emerging market sports ecosystems.',
+    content: [
+      'Global corporate sponsors no longer evaluate sports and cultural partnerships purely through broadcast impressions. The focus has shifted toward tangible market entry access and executive hospitality networking in key growth hubs.',
+      'When presenting a sponsorship proposition to institutional sponsors in London or Dubai, rights-holders must clearly articulate the B2B conversion pathways embedded within the event ecosystem.',
+      'A well-structured proposal translates audience demographics into specific enterprise lead pipelines and policy alignment opportunities.'
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'insight-4',
+    title: 'The Reality of Accessing Blended Finance & DFI Capital in Sub-Saharan Africa',
+    slug: 'reality-of-accessing-blended-finance-dfi-capital',
+    category: 'Funding Notes',
+    readTime: '8 min read',
+    publishedDate: 'June 2026',
+    author: 'Dr. Amina Diallo',
+    summary: 'Demystifying the relationship process required to secure development finance institution debt and private equity co-investments without false promises.',
+    content: [
+      'Development Finance Institutions (DFIs) operate under stringent environmental, social, and governance (ESG) mandates combined with rigorous credit committee standards.',
+      'Securing DFI support requires preparing detailed impact assessment documentation long before initiating formal funding conversations.',
+      'Haugh Advisory emphasizes process-oriented positioning that aligns project economics with DFI mandate parameters.'
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'
+  }
+];
+

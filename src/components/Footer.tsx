@@ -51,32 +51,32 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, openLeadModal }) =
           {/* Service Lines Column */}
           <div className="space-y-3">
             <h4 className="font-serif text-sm font-semibold tracking-wider uppercase text-[#C5A059]">
-              Service Lines
+              Advisory Practice
             </h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-[#C5A059] transition-colors">
-                  Inbound Market Entry
+                <button onClick={() => setActiveTab('what-we-do')} className="hover:text-[#C5A059] transition-colors">
+                  What We Do
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-[#C5A059] transition-colors">
-                  Outbound Global Bridge
+                <button onClick={() => setActiveTab('market-entry')} className="hover:text-[#C5A059] transition-colors">
+                  Inbound & Outbound Market Entry
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-[#C5A059] transition-colors">
-                  Pitch Decking & Collateral
+                <button onClick={() => setActiveTab('partnerships')} className="hover:text-[#C5A059] transition-colors">
+                  Strategic Partnerships
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-[#C5A059] transition-colors">
-                  Brand & Corporate Strategy
+                <button onClick={() => setActiveTab('sponsorships-funding')} className="hover:text-[#C5A059] transition-colors">
+                  Sponsorships & Funding Strategy
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('services')} className="hover:text-[#C5A059] transition-colors">
-                  Executive Summit Execution
+                <button onClick={() => setActiveTab('insights')} className="hover:text-[#C5A059] transition-colors">
+                  Insights & Market Notes
                 </button>
               </li>
             </ul>
@@ -85,33 +85,33 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, openLeadModal }) =
           {/* Quick Navigation Column */}
           <div className="space-y-3">
             <h4 className="font-serif text-sm font-semibold tracking-wider uppercase text-[#C5A059]">
-              Navigation
+              Governance & Contact
             </h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
                 <button onClick={() => setActiveTab('about')} className="hover:text-[#C5A059] transition-colors">
-                  Company Vision
+                  About Haugh Advisory
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('packages')} className="hover:text-[#C5A059] transition-colors">
-                  Packaged Offers
+                <button onClick={() => setActiveTab('contact')} className="hover:text-[#C5A059] transition-colors">
+                  Start a Conversation
                 </button>
               </li>
               <li>
-                <button onClick={() => setActiveTab('case-studies')} className="hover:text-[#C5A059] transition-colors">
-                  Credibility & Impact
+                <button onClick={() => setActiveTab('privacy')} className="hover:text-[#C5A059] transition-colors">
+                  Privacy Policy & Protection
+                </button>
+              </li>
+              <li>
+                <button onClick={() => setActiveTab('terms')} className="hover:text-[#C5A059] transition-colors">
+                  Terms & Regulatory Safeguards
                 </button>
               </li>
               <li>
                 <button onClick={() => setActiveTab('deal-room')} className="text-[#C5A059] hover:underline flex items-center space-x-1 font-semibold">
                   <ShieldCheck className="w-3.5 h-3.5" />
                   <span>Stakeholder Deal Room</span>
-                </button>
-              </li>
-              <li>
-                <button onClick={() => openLeadModal('GENERAL')} className="hover:text-[#C5A059] transition-colors">
-                  Initiate Mandate
                 </button>
               </li>
             </ul>
